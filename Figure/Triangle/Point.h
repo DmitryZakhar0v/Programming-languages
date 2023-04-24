@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 using namespace std;
 
@@ -13,17 +13,17 @@ namespace MiitPoint
         double ordinate;
 
         /*
-        @brief инициализирует новый объект класса Point
-        @param x - абсцисса
-        @param y - ордината
+        @brief РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚ РЅРѕРІС‹Р№ РѕР±СЉРµРєС‚ РєР»Р°СЃСЃР° Point
+        @param x - Р°Р±СЃС†РёСЃСЃР°
+        @param y - РѕСЂРґРёРЅР°С‚Р°
         */
         Point(const double x = 0, const double y = 0);
 
         /*
-        @brief перегрузка оператора потока вывода
-        @param поток вывода
-        @param point точка
-        @return возвращает поток вывода
+        @brief РїРµСЂРµРіСЂСѓР·РєР° РѕРїРµСЂР°С‚РѕСЂР° РїРѕС‚РѕРєР° РІС‹РІРѕРґР°
+        @param РїРѕС‚РѕРє РІС‹РІРѕРґР°
+        @param point С‚РѕС‡РєР°
+        @return РІРѕР·РІСЂР°С‰Р°РµС‚ РїРѕС‚РѕРє РІС‹РІРѕРґР°
         */
         friend ostream& operator<< (ostream& out, const Point& point);
     };
