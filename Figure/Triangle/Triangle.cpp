@@ -1,10 +1,19 @@
 #include "Triangle.h"
 #include <cmath>
+#include <exception>
 
 MiitPoint::Triangle::Triangle(const Point userPoint1, const Point userPoint2, const Point userPoint3)
 	:point1(userPoint1), point2(userPoint2), point3(userPoint3)
 {
-
+	if ((userPoint1 == userPoint2) or (userPoint1 == userPoint3) or (userPoint2 == userPoint3))
+	{
+		throw std::invalid_argument("Not Triangle");
+	}
+	
+	if ((userPoint3.abscissa - userPoint1.abscissa) / (userPoint2.abscissa - userPoint1.abscissa) - (userPoint3.ordinate - userPoint1.ordinate) / (userPoint2.ordinate - userPoint1.ordinate) <= 1e-20)
+	{
+		throw std::invalid_argument("Not Triangle, Line");
+	}
 	this->side1 = std::sqrt(std::pow((userPoint1.abscissa - userPoint2.abscissa), 2) + std::pow((userPoint1.ordinate - userPoint2.ordinate), 2));
 	this->side2 = std::sqrt(std::pow((userPoint2.abscissa - userPoint3.abscissa), 2) + std::pow((userPoint2.ordinate - userPoint3.ordinate), 2));
 	this->side3 = std::sqrt(std::pow((userPoint3.abscissa - userPoint1.abscissa), 2) + std::pow((userPoint3.ordinate - userPoint1.ordinate), 2));

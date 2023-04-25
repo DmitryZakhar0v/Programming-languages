@@ -1,6 +1,5 @@
 ﻿#pragma once
 #include <iostream>
-using namespace std;
 
 namespace MiitPoint
 {
@@ -25,6 +24,8 @@ namespace MiitPoint
         @param point точка
         @return возвращает поток вывода
         */
-        friend ostream& operator<< (ostream& out, const Point& point);
+        friend std::ostream& operator<< (std::ostream& out, const Point& point);
+
+        friend bool operator ==(const Point& lhs, const Point& rhs);
     };
 }
