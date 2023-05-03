@@ -7,9 +7,9 @@ int main()
 {
 	try 
 	{
-		Point point1 = Point(1, 1);
-		Point point2 = Point(2, 2);
-		Point point3 = Point(3,3);
+		Point point1 = Point(0,3);
+		Point point2 = Point(3,0);
+		Point point3 = Point(0,0);
 		Triangle triangle1{ point1, point2, point3 };
 
 		std::cout << triangle1.getArea();

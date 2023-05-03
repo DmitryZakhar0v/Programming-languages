@@ -130,10 +130,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="HelpMath.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Triangle.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="HelpMath.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Triangle.cpp" />
   </ItemGroup>

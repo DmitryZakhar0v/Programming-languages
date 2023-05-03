@@ -3,6 +3,14 @@
 
 namespace MiitPoint
 {
+	class Triangle;
+	/*
+	@brief Функция для вычисления длинны стороны по двум точкам
+	@param Point1 Первая точка
+	@param Point2 Вторая точка
+	@return Длинна стороны
+	*/
+	double getSideLen(const Point& Point1, const Point& Point2);
 	class Triangle
 	{
 	public:
@@ -12,7 +20,7 @@ namespace MiitPoint
 		@param userPoint2 - вторая точка треуголника (объект типа Point)
 		@param userPoint3 - третья точка треуголника (объект типа Point)
 		*/
-		Triangle(const Point userPoint1, const Point userPoint2, const Point userPoint3);
+		Triangle(const Point& userPoint1, const Point& userPoint2, const Point& userPoint3);
 
 		/*
 		@brief Функция для получения первой точки треугольника
