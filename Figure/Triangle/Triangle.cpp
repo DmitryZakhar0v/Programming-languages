@@ -11,7 +11,7 @@ MiitPoint::Triangle::Triangle(const Point& userPoint1, const Point& userPoint2, 
 		throw std::invalid_argument("Not Triangle");
 	}
 
-	if ((userPoint3.abscissa - userPoint1.abscissa) / (userPoint2.abscissa - userPoint1.abscissa) - (userPoint3.ordinate - userPoint1.ordinate) / (userPoint2.ordinate - userPoint1.ordinate) <= 1e-20)
+	if (Miit::Math::doubleequal((userPoint3.abscissa - userPoint1.abscissa) / (userPoint2.abscissa - userPoint1.abscissa), (userPoint3.ordinate - userPoint1.ordinate) / (userPoint2.ordinate - userPoint1.ordinate)))
 	{
 		throw std::invalid_argument("Not Triangle, Line");
 	}
